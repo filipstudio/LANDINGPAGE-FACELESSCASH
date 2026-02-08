@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" style=""><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE FACELESS CASH BLUEPRINT - Sales Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+      :root {
+        --primary-navy: #1b2b4d;
+        --secondary-navy: #0d1235;
+        --accent-orange: #ff6b35;
+        --text-dark: #1a1a2e;
+        --text-gray: #4a4a4a;
+        --bg-light: #f8f9fa;
+        --white: #ffffff;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: 'Inter', sans-serif;
+        color: var(--text-dark);
+        line-height: 1.6;
+        background-color: var(--white);
+        overflow-x: hidden;
+      }
+
+      /* Typography */
+      h1,
+      h2,
+      h3,
+      h4 {
+        line-height: 1.2;
+        font-weight: 700;
+        margin-bottom: 1rem;
+      }
+
+      h1 {
+        font-size: 3rem;
+        letter-spacing: -0.02em;
+        margin-bottom: 1.5rem;
+      }
+
+      h2 {
+        font-size: 2.25rem;
+        letter-spacing: -0.01em;
+      }
+
+      h3 {
+        font-size: 1.5rem;
+        color: var(--primary-navy);
+      }
+
+      p {
+        margin-bottom: 1.5rem;
+        font-size: 1.125rem;
+        color: var(--text-gray);
+      }
+
+      .text-center {
+        text-align: center;
+      }
+      .text-white {
+        color: var(--white);
+      }
+      .text-orange {
+        color: var(--accent-orange);
+      }
+
+      .container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      /* Buttons */
+      .btn {
+        display: inline-block;
+        padding: 1.25rem 3rem;
+        background-color: var(--accent-orange);
+        color: white;
+        font-weight: 700;
+        font-size: 1.25rem;
+        border-radius: 8px;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        border: none;
+        cursor: pointer;
+        box-shadow: 0 4px 6px rgba(255, 107, 53, 0.3);
+      }
+
+      .btn:hover {
+        background-color: #e85d2a;
+        transform: translateY(-2px);
+        box-shadow: 0 10px 15px rgba(255, 107, 53, 0.4);
+      }
+
+      /* Sections */
+      section {
+        padding: 5rem 0;
+      }
+
+      .bg-navy {
+        background-color: var(--primary-navy);
+        color: white;
+      }
+      .bg-navy p {
+        color: #e2e8f0;
+      }
+      .bg-light {
+        background-color: var(--bg-light);
+      }
+      .bg-gradient {
+        background: linear-gradient(135deg, #1b2b4d 0%, #0d1235 100%);
+        color: white;
+      }
+
+      /* Hero */
+      .hero {
+        padding: 6rem 0;
+        background: linear-gradient(135deg, #1b2b4d 0%, #0f172a 100%);
+        color: white;
+        text-align: center;
+      }
+
+      .hero p {
+        color: #cbd5e1;
+        font-size: 1.35rem;
+        max-width: 850px;
+        margin: 0 auto 2.5rem;
+        line-height: 1.8;
+        font-weight: 400;
+      }
+
+      .price-badge {
+        display: inline-block;
+        background: rgba(255, 255, 255, 0.1);
+        padding: 0.5rem 1.5rem;
+        border-radius: 50px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        margin-bottom: 2rem;
+        font-weight: 600;
+        color: var(--accent-orange);
+      }
+
+      .old-price {
+        text-decoration: line-through;
+        opacity: 0.7;
+        margin-right: 0.5rem;
+        color: white;
+      }
+
+      .trust-badges {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        margin-top: 3rem;
+        opacity: 0.8;
+        font-size: 0.9rem;
+      }
+
+      /* Cards */
+      .grid-2 {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+      }
+      .grid-3 {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+      }
+
+      .card {
+        background: white;
+        padding: 2rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        border: 1px solid #e2e8f0;
+      }
+
+      .icon-box {
+        font-size: 2rem;
+        color: var(--accent-orange);
+        margin-bottom: 1rem;
+      }
+
+      /* Curriculum */
+      .module-card {
+        background: white;
+        border: 1px solid #e2e8f0;
+        border-radius: 8px;
+        margin-bottom: 1rem;
+        overflow: hidden;
+      }
+      .module-header {
+        background: #f1f5f9;
+        padding: 1rem 1.5rem;
+        font-weight: 700;
+        color: var(--primary-navy);
+      }
+      .module-content {
+        padding: 1rem 1.5rem;
+      }
+
+      /* Transformation */
+      .comparison-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0;
+        border-radius: 12px;
+        overflow: hidden;
+        margin: 3rem 0;
+      }
+      .before-col {
+        background: #fee2e2;
+        padding: 3rem;
+        color: #991b1b;
+      }
+      .after-col {
+        background: #dcfce7;
+        padding: 3rem;
+        color: #166534;
+      }
+
+      /* Pricing */
+      .pricing-card {
+        max-width: 600px;
+        margin: 0 auto;
+        background: white;
+        padding: 3rem;
+        border-radius: 16px;
+        box-shadow:
+          0 20px 25px -5px rgba(0, 0, 0, 0.1),
+          0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        text-align: center;
+        border: 2px solid var(--primary-navy);
+      }
+
+      .price-large {
+        font-size: 4rem;
+        font-weight: 800;
+        color: var(--accent-orange);
+        line-height: 1;
+        margin: 1rem 0;
+      }
+
+      .feature-list {
+        text-align: left;
+        margin: 2rem 0;
+        list-style: none;
+      }
+      .feature-list li {
+        margin-bottom: 0.75rem;
+        padding-left: 1.5rem;
+        position: relative;
+      }
+      .feature-list li::before {
+        content: '✓';
+        color: var(--accent-orange);
+        position: absolute;
+        left: 0;
+        font-weight: bold;
+      }
+
+      /* FAQ */
+      .faq-item {
+        background: white;
+        border-radius: 8px;
+        padding: 1.5rem;
+        margin-bottom: 1rem;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+      }
+      .faq-q {
+        font-weight: 700;
+        color: var(--primary-navy);
+        margin-bottom: 0.5rem;
+      }
+
+      /* Footer */
+      footer {
+        background: var(--secondary-navy);
+        color: #94a3b8;
+        padding: 3rem 0;
+        text-align: center;
+        font-size: 0.9rem;
+      }
+      footer a {
+        color: #cbd5e1;
+        margin: 0 10px;
+        text-decoration: none;
+      }
+
+      /* Mobile */
+      @media (max-width: 768px) {
+        h1 {
+          font-size: 2rem;
+        }
+        h2 {
+          font-size: 1.75rem;
+        }
+        .comparison-grid {
+          grid-template-columns: 1fr;
+        }
+        .hero {
+          padding: 4rem 0;
+        }
+      }
+    </style>
+  </head>
+  <body style="">
+    <!-- HERO SECTION -->
+    <header class="hero">
+      <div class="container">
+        <div class="price-badge"><span class="old-price">Was $92</span> NOW ONLY $27 • 70% OFF</div>
+        <h1>Turn Faceless Content Into Your First $500+ <br>Starting From Zero</h1>
+        <p>
+          The proven 11-step system to build a profitable faceless brand without showing your face, creating original
+          content, or having any followers.
+        </p>
+        <a href="https://filiptmilan.gumroad.com/l/trueo" class="btn">
+          GET INSTANT ACCESS NOW →
+        </a>
+        <div class="trust-badges">
+          <span><i class="fas fa-check-circle"></i> Instant PDF Download</span>
+          <span><i class="fas fa-check-circle"></i> Lifetime Access</span>
+          <span><i class="fas fa-check-circle"></i> No Monthly Fees</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- PROBLEM SECTION -->
+    <section class="bg-light">
+      <div class="container">
+        <div class="text-center" style="margin-bottom: 3rem">
+          <h2>Are You Tired of Creating Content That Gets Views But Makes Zero Money?</h2>
+          <p>Most beginners are stuck in the "content trap" without a clear path to profit.</p>
+        </div>
+
+        <div class="grid-3">
+          <div class="card">
+            <div class="icon-box"><i class="fas fa-chart-line"></i></div>
+            <h4>The View Trap</h4>
+            <p>You post daily and get views, but your bank account stays at exactly $0.</p>
+          </div>
+          <div class="card">
+            <div class="icon-box"><i class="fas fa-clock"></i></div>
+            <h4>Wasted Time</h4>
+            <p>You waste hours trying to create "original" content that flops while others succeed.</p>
+          </div>
+          <div class="card">
+            <div class="icon-box"><i class="fas fa-user-secret"></i></div>
+            <h4>Face Shy</h4>
+            <p>You want to build an income stream but absolutely don't want to show your face online.</p>
+          </div>
+          <div class="card">
+            <div class="icon-box"><i class="fas fa-users"></i></div>
+            <h4>Follower Myth</h4>
+            <p>You're stuck believing you need 10k followers before you can make your first dollar.</p>
+          </div>
+          <div class="card">
+            <div class="icon-box"><i class="fas fa-compass"></i></div>
+            <h4>No Direction</h4>
+            <p>You see others winning but can't figure out the actual "system" they are using.</p>
+          </div>
+          <div class="card">
+            <div class="icon-box"><i class="fas fa-dollar-sign"></i></div>
+            <h4>Zero Sales</h4>
+            <p>You have links in your bio, but nobody is clicking or buying anything.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOLUTION SECTION -->
+    <section class="bg-navy">
+      <div class="container text-center">
+        <h2 class="text-white">Introducing The Faceless Cash Blueprint</h2>
+        <h3 class="text-orange" style="margin-bottom: 2rem">The Complete System That Removes All The Guesswork</h3>
+
+        <div style="max-width: 800px; margin: 0 auto; text-align: left">
+          <p class="text-white">
+            This isn't another vague "motivational" guide that tells you to "just keep posting." It's a precise,
+            step-by-step execution roadmap designed for one thing: <strong>Results.</strong>
+          </p>
+          <p class="text-white">
+            We've stripped away all the fluff and focused purely on the mechanics of monetization. You don't need to be
+            creative. You don't need to be lucky. You just need to follow the 11 steps.
+          </p>
+          <p class="text-white">
+            It's a proven system that works even if you're starting from absolute scratch today. No previous experience
+            required.
+          </p>
+        </div>
+
+        <div style="margin-top: 3rem">
+          <a href="https://filiptmilan.gumroad.com/l/trueo" class="btn">
+            START YOUR JOURNEY NOW →
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- BENEFITS SECTION -->
+    <section>
+      <div class="container">
+        <div class="text-center" style="margin-bottom: 3rem">
+          <h2>What You'll Achieve With This Blueprint</h2>
+        </div>
+
+        <div class="grid-2">
+          <div class="card">
+            <h4><i class="fas fa-money-bill-wave text-orange"></i> Generate $500+</h4>
+            <p>A realistic roadmap to your first $500 in 21-30 days.</p>
+          </div>
+          <div class="card">
+            <h4><i class="fas fa-mask text-orange"></i> 100% Faceless</h4>
+            <p>Build a profitable brand while staying completely anonymous.</p>
+          </div>
+          <div class="card">
+            <h4><i class="fas fa-copy text-orange"></i> Copy &amp; Win</h4>
+            <p>Stop guessing. Learn to ethically copy proven winning formats.</p>
+          </div>
+          <div class="card">
+            <h4><i class="fas fa-filter text-orange"></i> Conversion Focus</h4>
+            <p>Turn casual views into actual cash with specific content structures.</p>
+          </div>
+          <div class="card">
+            <h4><i class="fas fa-rocket text-orange"></i> Start From Zero</h4>
+            <p>No followers needed. This system works from Day 1.</p>
+          </div>
+          <div class="card">
+            <h4><i class="fas fa-mobile-alt text-orange"></i> Phone Only</h4>
+            <p>Work from anywhere using just your smartphone and free apps.</p>
+          </div>
+        </div>
+
+        <div class="text-center" style="margin-top: 3rem">
+          <a href="https://filiptmilan.gumroad.com/l/trueo" class="btn">
+            CLAIM YOUR BLUEPRINT →
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CURRICULUM SECTION -->
+    <section class="bg-light">
+      <div class="container">
+        <div class="text-center" style="margin-bottom: 3rem">
+          <h2>What's Inside The Blueprint</h2>
+          <p>11 Detailed Steps That Take You From Zero To Your First $500+</p>
+        </div>
+
+        <div style="max-width: 800px; margin: 0 auto">
+          <div class="module-card">
+            <div class="module-header">STEP 1: Pick a Niche That Prints Cash</div>
+            <div class="module-content">How to find audiences willing to spend, not just scroll.</div>
+          </div>
+          <div class="module-card">
+            <div class="module-header">STEP 2: Don't Reinvent — Copy &amp; Own It</div>
+            <div class="module-content">Why originality kills beginners and how to shortcut your way.</div>
+          </div>
+          <div class="module-card">
+            <div class="module-header">STEP 3: Create Content That Converts</div>
+            <div class="module-content">Hooks, retention hacks, and CTAs designed to sell.</div>
+          </div>
+          <div class="module-card">
+            <div class="module-header">STEP 4: Monetize Like a Pro</div>
+            <div class="module-content">Setting up your bio, link, and offer for maximum conversion.</div>
+          </div>
+          <div class="module-card">
+            <div class="module-header">STEP 5: The 11-Step Execution Guide</div>
+            <div class="module-content">The daily checklist for building your system.</div>
+          </div>
+          <div class="module-card">
+            <div class="module-header">STEP 6: Video Creation Toolkit</div>
+            <div class="module-content">The exact free tools and workflow to make pro videos fast.</div>
+          </div>
+          <div class="module-card">
+            <div class="module-header">STEP 7: Posting Strategy That Works</div>
+            <div class="module-content">How often to post and how to hack the algorithm.</div>
+          </div>
+          <div class="module-card">
+            <div class="module-header">STEP 8: Track The Right Metrics</div>
+            <div class="module-content">Ignore vanity metrics. Focus on money signals.</div>
+          </div>
+          <div class="module-card">
+            <div class="module-header">STEP 9: The Math Behind $500+</div>
+            <div class="module-content">Breaking down the numbers so you know exactly what to hit.</div>
+          </div>
+          <div class="module-card">
+            <div class="module-header">STEP 10: Scale What Works</div>
+            <div class="module-content">How to double down on winners without burning out.</div>
+          </div>
+          <div class="module-card">
+            <div class="module-header">STEP 11: Final Execution Rules</div>
+            <div class="module-content">The non-negotiables for long-term success.</div>
+          </div>
+        </div>
+
+        <div class="text-center" style="margin-top: 3rem">
+          <a href="https://filiptmilan.gumroad.com/l/trueo" class="btn">
+            GET INSTANT ACCESS →
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHO IS THIS FOR -->
+    <section>
+      <div class="container">
+        <h2 class="text-center" style="margin-bottom: 3rem">Is This Blueprint For You?</h2>
+
+        <div class="grid-2">
+          <div>
+            <h3 style="color: var(--primary-navy); margin-bottom: 1.5rem">✅ This IS for you if:</h3>
+            <ul class="feature-list">
+              <li>You want to make money online without showing your face</li>
+              <li>You're willing to post content consistently for 21+ days</li>
+              <li>You want a proven system, not vague motivation</li>
+              <li>You're starting from zero (no followers needed)</li>
+              <li>You can dedicate 1-2 hours per day</li>
+              <li>You want realistic results ($500+), not "get rich quick" lies</li>
+            </ul>
+          </div>
+          <div>
+            <h3 style="color: #ef4444; margin-bottom: 1.5rem">❌ This is NOT for you if:</h3>
+            <ul style="list-style: none">
+              <li style="margin-bottom: 1rem">
+                <i class="fas fa-times" style="color: #ef4444; margin-right: 10px"></i> You expect overnight success
+                without effort
+              </li>
+              <li style="margin-bottom: 1rem">
+                <i class="fas fa-times" style="color: #ef4444; margin-right: 10px"></i> You won't follow the system
+                step-by-step
+              </li>
+              <li style="margin-bottom: 1rem">
+                <i class="fas fa-times" style="color: #ef4444; margin-right: 10px"></i> You want passive income without
+                doing the work
+              </li>
+              <li style="margin-bottom: 1rem">
+                <i class="fas fa-times" style="color: #ef4444; margin-right: 10px"></i> You are looking for a magic
+                button
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="text-center" style="margin-top: 3rem">
+          <a href="https://filiptmilan.gumroad.com/l/trueo" class="btn">
+            YES, THIS IS FOR ME →
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRANSFORMATION SECTION -->
+    <section class="bg-gradient">
+      <div class="container text-center">
+        <h2 class="text-white">Your Life 30 Days From Now</h2>
+
+        <div class="comparison-grid text-center">
+          <div class="before-col">
+            <h3>BEFORE</h3>
+            <p style="color: #7f1d1d">Posting random content</p>
+            <p style="color: #7f1d1d">Zero sales, endless frustration</p>
+            <p style="color: #7f1d1d">Confused about what works</p>
+            <p style="color: #7f1d1d">Wasting time on vanity metrics</p>
+          </div>
+          <div class="after-col">
+            <h3>AFTER</h3>
+            <p style="color: #14532d">Following a proven system</p>
+            <p style="color: #14532d">Making your first consistent sales</p>
+            <p style="color: #14532d">Clear roadmap to $500+</p>
+            <p style="color: #14532d">Tracking metrics that pay</p>
+          </div>
+        </div>
+
+        <a href="https://filiptmilan.gumroad.com/l/trueo" class="btn">
+          START YOUR TRANSFORMATION →
+        </a>
+      </div>
+    </section>
+
+    <!-- PRICING SECTION -->
+    <section>
+      <div class="container">
+        <div class="pricing-card">
+          <h3 style="color: var(--text-gray); font-size: 1.2rem">THE FACELESS CASH BLUEPRINT</h3>
+          <div style="text-decoration: line-through; color: #94a3b8; font-size: 1.5rem; margin-top: 1rem">
+            Regular Price: $92
+          </div>
+          <div class="price-large">$27</div>
+          <div style="
+              display: inline-block;
+              background: #fee2e2;
+              color: #ef4444;
+              padding: 0.25rem 1rem;
+              border-radius: 50px;
+              font-weight: 700;
+              margin-bottom: 2rem;
+            ">
+            70% OFF — Limited Time
+          </div>
+
+          <div style="border-top: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0; padding: 1rem 0">
+            <h4 style="text-align: left; margin-bottom: 1rem">What's Included:</h4>
+            <ul class="feature-list">
+              <li>Complete 11-Step Blueprint (PDF)</li>
+              <li>Niche Validation Framework</li>
+              <li>Content Copy System</li>
+              <li>Monetization Setup Guide</li>
+              <li>Video Creation Templates</li>
+              <li>Posting Strategy Checklist</li>
+              <li>Metrics Tracking Guide</li>
+              <li>Scaling Playbook</li>
+              <li><strong>Lifetime Access</strong> (No Subscriptions)</li>
+              <li><strong>Instant Digital Download</strong></li>
+            </ul>
+          </div>
+
+          <div style="margin-top: 2rem">
+            <a href="https://filiptmilan.gumroad.com/l/trueo" class="btn" style="width: 100%">
+              GET INSTANT ACCESS FOR $27 →
+            </a>
+            <p style="font-size: 0.9rem; margin-top: 1rem; color: #64748b">
+              <i class="fas fa-lock"></i> Secure Payment • 30-Day Money-Back Guarantee
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section class="bg-light">
+      <div class="container" style="max-width: 800px">
+        <h2 class="text-center" style="margin-bottom: 3rem">Common Questions Answered</h2>
+
+        <div class="faq-item">
+          <div class="faq-q">Do I need to show my face?</div>
+          <p style="margin: 0">
+            No. This system is 100% designed for faceless creators. You never have to be on camera.
+          </p>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">How long until I see results?</div>
+          <p style="margin: 0">
+            If you follow the system exactly, most students see their first traction in 14-21 days and hit the $500
+            milestone within 30 days.
+          </p>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Do I need followers to start?</div>
+          <p style="margin: 0">No. The strategy is built for accounts starting from zero.</p>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">What tools do I need?</div>
+          <p style="margin: 0">Just your smartphone and free apps (CapCut, Canva, TikTok/Instagram).</p>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Is this guaranteed income?</div>
+          <p style="margin: 0">
+            No system guarantees income without work. If you execute the steps consistently, the results are
+            predictable, but you must do the work.
+          </p>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">What format is the course?</div>
+          <p style="margin: 0">It is a high-quality, actionable PDF Blueprint available for instant download.</p>
+        </div>
+
+        <div class="text-center" style="margin-top: 3rem">
+          <a href="https://filiptmilan.gumroad.com/l/trueo" class="btn">
+            GET STARTED NOW →
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="bg-gradient text-center">
+      <div class="container">
+        <h1>Ready to Turn Content Into Cash?</h1>
+        <p class="text-white" style="font-size: 1.5rem">Join creators who stopped guessing and started earning.</p>
+        <div class="price-badge" style="margin-top: 2rem">Limited Time: $27 (70% OFF)</div>
+        <br>
+        <a href="https://filiptmilan.gumroad.com/l/trueo" class="btn btn-large">
+          CLAIM YOUR BLUEPRINT NOW →
+        </a>
+        <p style="margin-top: 1.5rem; font-size: 0.9rem; opacity: 0.8; color: white">
+          <i class="fas fa-lock"></i> Secure Payment • Instant PDF Delivery • Lifetime Access
+        </p>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="container">
+        <p>© 2026 The Faceless Cash Blueprint. All Rights Reserved.</p>
+        <div style="margin-top: 1rem"><br></div>
+        <p style="margin-top: 2rem; font-size: 0.8rem; opacity: 0.6">
+          Disclaimer: Results vary based on execution. This is not financial advice.
+        </p>
+      </div>
+    </footer>
+  
+
+</body></html>
